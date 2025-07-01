@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🩺 AI Medical Voice Agent
 
-## Getting Started
+A web-based conversational assistant designed to help users with medical inquiries using natural voice communication. It combines voice input, generative AI models, secure user authentication, and a serverless database to deliver a seamless and intuitive experience.
 
-First, run the development server:
+---
+
+## 🌟 Features
+
+- 🎤 **Voice Interaction**: Real-time conversations using **Vapi** and **AssemblyAI** for speech-to-text and text-to-speech.
+- 🧠 **AI-Powered Responses**: Intelligent answers powered by **Google Generative AI** and **OpenAI**.
+- 🗃️ **Serverless Database**: Fast, scalable data storage via **Neon Database** and **Drizzle ORM**.
+- 🖥️ **Modern UI**: Built with **Next.js**, **React**, and **Tailwind CSS** for responsive, elegant interfaces.
+- 🔐 **Secure Authentication**: Managed with **Clerk** for scalable user auth.
+- ⚡ **Real-Time Processing**: Fast API interactions using **Axios**.
+- 🧩 **Custom UI Components**: Enhanced with **Radix UI**, **Lucide**, and **Tabler Icons**.
+
+---
+
+## 🧱 Tech Stack
+
+### 🖥️ Frontend
+
+| Tool | Purpose |
+|------|---------|
+| `next@15.3.4` | React framework for SSR and routing |
+| `react@19.0.0` | UI component library |
+| `tailwindcss` + `tailwind-merge@3.3.1` | Utility-first CSS & class merging |
+| `clsx@2.1.1` / `class-variance-authority@0.7.1` | Class utilities |
+| `radix-ui/react-dialog@1.1.14`, `@radix-ui/react-slot@1.2.3` | Accessible component primitives |
+| `lucide-react@0.523.0` / `tabler/icons-react@3.34.0` | Icon libraries |
+| `motion@12.19.1` | Animations and transitions |
+
+### 🎤 Voice & AI
+
+| Tool | Purpose |
+|------|---------|
+| `@vapi-ai/web@2.3.8` | Real-time voice assistant SDK |
+| `@google/generative-ai@0.24.1` | Google Gemini API |
+| `openai@5.7.0` | OpenAI’s GPT models |
+| `axios@1.10.0` | HTTP client for APIs |
+| `assemblyai` | (via direct API) Speech recognition |
+
+### 🗃️ Database
+
+| Tool | Purpose |
+|------|---------|
+| `@neondatabase/serverless@1.0.1` | Serverless Postgres |
+| `drizzle-orm@0.44.2` | Type-safe ORM |
+| `postgres@3.4.7` | Postgres driver for Node.js |
+
+### 🔐 Authentication
+
+| Tool | Purpose |
+|------|---------|
+| `@clerk/nextjs@6.23.0` | Authentication and session handling |
+
+### 🧰 Utilities
+
+| Tool | Purpose |
+|------|---------|
+| `uuid@11.1.0` | Unique ID generation |
+
+---
+
+## ⚙️ Prerequisites
+
+- Node.js v18+
+- npm or Yarn
+- Neon Database account
+- API keys for:
+  - Vapi
+  - AssemblyAI
+  - Google Generative AI
+  - OpenAI
+  - Clerk
+
+---
+
+## 📦 Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+git clone https://github.com/your-username/ai-medical-voice-agent.git
+cd ai-medical-voice-agent
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Install dependencies
+npm install
