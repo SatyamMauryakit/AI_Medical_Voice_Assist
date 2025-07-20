@@ -2,6 +2,8 @@ import { db } from "@/config/db";
 import { openai } from "@/config/OpenAiModel";
 import { SessionChatTable } from "@/config/schema";
 import { NextRequest, NextResponse } from "next/server";
+import { eq } from 'drizzle-orm';
+
 
 const  REPORT_GEN_PROMPT= `
     You are an Al Medical Voice Agent that just finished a voice conversation with a user. Based on the transcript, generate a structured report with the following fields: 1. sessionld: a unique session identifier
